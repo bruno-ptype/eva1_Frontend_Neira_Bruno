@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título para SEO-->
+    <title>Consultoría y desarrollo de software</title>
+
+    <!-- Descripción relevante para los resultados -->
+    <meta name="description" content="Ofrecemos servicios de consultoría y desarrollo de software a medida para empresas. Contáctanos para soluciones tecnológicas innovadoras.">
+
+    <link rel="stylesheet" href="style.css">
+   
+    <!-- Reconocimiento del tema predeterminado del dispositivo -->
+
+
+</head>
+<body>
+    
+    <header class="header">
+        <nav class="nav">
+            <h1 class="logo">ConIngenio</h1>
+
+            <ul class="nav_list">
+                <ul><a href="#Home">Home</a></ul>
+                <ul><a href="#Nuestros servicios">Nuestros servicios</a></ul>
+                <ul><a href="#contacto">Contacto</a></ul>
+                <ul><a href="#Nosotros">Nosotros</a></ul>
+            </ul>
+        </nav>  
+
+        <!--#########################
+        ||| Boton para modo oscuro|||
+        ###########################-->
+        <section class="dark-mode-toggle-container">
+        <a class= "dark-mode-toggle" id="toggle-button" href="#" >Cambiar de modo 🌙🌞</a>
+        </section>  
+        <!-- -->
+            <section class="hero">
+                <div class="hero__content">
+                    <h2>Transformamos tu negocio con tecnología</h2>
+                    <p>Consultoría y desarrollo de software a medida para empresas innovadoras.</p>
+                    <a href="#contacto" class="btn-primary">Contáctanos</a>
+                </div>
+            </section>
+        </header>
+
+        <!--##################################################################
+            |||| SECCION PRINCIPAL (Home, Nuestros servicios y Contacto) ||||
+        ###################################################################-->
+
+        <main>
+            <section id="Principal" class="section">
+                <h2 class="section__title">ConIngenio</h2>
+                <div class="cards">
+
+                    <!--Contenedor de cards-->
+
+                    <article class="card">
+
+                        <!--####################### 
+                          |||Tarjeta de Home |||
+                         #######################-->
+
+                        <br>
+                        <h3 class="card__title">Nuestra empresa</h3>
+                        <p class="card__description">Creamos soluciones personalizadas que se adaptan a las necesidades específicas de tu negocio, utilizando las últimas tecnologías.</p>  
+
+
+                            <!--Boton saber más -->
+
+                        <button class="card__btn">Saber más</button>
+                    </article>
+
+                    
+                    <!--################################# 
+                    ||| Tarjeta de Nuestros servicios ||| 
+                    ##################################-->
+
+
+                    <article class="card">
+                        <h3 class="card__title">Nuestros Servicios</h3>
+                        <p class="card__description">Ofrecemos asesoramiento experto para ayudarte a tomar decisiones informadas sobre tu infraestructura tecnológica y estrategia digital. Entre nuestros servicios se encuentran::: Entre ellas se encuentran: Consultoría Digital, Soluciones Mul7experiencia, Evolución de 
+Ecosistemas y Soluciones Low-Code</p>
+
+                        <!--Boton saber más-->
+                        
+                        <button class="card__btn">Saber más</button>
+                    </article>
+     
+                    
+                </div>
+            </section>
+            <section id="Nuestros servicios" class="sections">
+                <h2 class="sections__title">Nuestros Servicios</h2>
+                <div class="cards">
+            <!-- ####################################################
+                               |||| Listado y descripción de nuestros servicios ||||
+                             #####################################################-->
+
+                            <h4 class="card__subtitle">Nuestros servicios
+                                <ul class="new_nav_list">
+                                    <li><p class="card_description">Consultoría Digital: Realizamos una revisión exahustiva de los procesos internos de las empresas.</p> <button class="card__btn">Saber más</button> </li>
+                                    <li><p class="card_description">Soluciones Multiexperiencia: Ayudamos a nuestros clientes a crear experiencias digitales coherentes y atractivas.</p> <button class="card__btn">Saber más</button> </li>
+                                    <li><p class="card_description">Evolución de Ecosistemas: Asistimos a las empresas en su transformación digital y modernización de sistemas.</p> <button class="card__btn">Saber más</button> </li>
+                                    <li><p class="card_description">Soluciones Low-Code: Desarrollamos aplicaciones rápidamente con mínima programación.</p> <button class="card__btn">Saber más</button> </li>
+                                </ul>
+                            </h4>
+        </section>
+          <!-- ======================                
+            ||||SECCIÓN CONTACTO ||||
+             ====================== -->
+
+             <!--##################################
+                            ||||Seccion contactenos||||
+                    ######################################-->
+
+                    <article>
+                        <h3>Contáctanos</h3>
+                        <p class="card__description">Llena el siguiente formulario para ponerte en contacto con nosotros.</p>
+                    </article>
+
+                <section id="contacto" class="section">
+                <h1 class="section__title">Contáctanos</h1>
+
+                <!-- Formulario accesible y semántico -->
+                <form id="contactForm" novalidate>
+                    
+                    <label>
+                    Nombre
+                    <input type="text" id="name" placeholder="Tu nombre">
+                    </label>
+
+                    <label>
+                    Email
+                    <input type="email" id="email" placeholder="correo@empresa.com">
+                    </label>
+
+                    <label>
+                    Mensaje
+                    <textarea id="message" placeholder="Cuéntanos qué necesitas"></textarea>
+                    </label>
+
+                    <button type="submit" class="btn-primary">Enviar</button>
+
+                    <!-- Feedback dinámico -->
+                    <p class="form__feedback" id="formFeedback"></p>
+                </form>
+                </section>
+
+
+                <!--##############################
+                |||| Información de la empresa||||
+                ###############################-->
+
+                <article class="card">
+                        <h3 class="card__title">Información de ConIngenio</h3>
+                        <p class="card__description">Dirección física de la empresa:</p>
+                        <p class="card__description">Av. Providencia 1234, Oficina 601</p>
+                        <p class="card__description">Providencia, Santiago</p>
+                        <p class="card__description">Chile</p>
+
+                        <br>
+
+                        <p class="card_description">Contacto telefónico:</p>
+                        <p class="card_description">+56 2 1234 5678</p>
+
+                        <br>
+
+                        <p class="card_description">Dominio de la página de web:</p>
+                        <p class="card_description">www.coningenio.cl</p>
+
+                        <br>
+                        <br>
+
+                        <p class="card_description">Correo electrónico:</p>
+                        <p class="card_description">info@coningenio.cl</p>
+
+                    <br>
+
+                    </article>
+
+                    <!-- #####################################
+                                |||| Nosotros ||||
+                     ######################################-->
+
+
+                    <article class="card">
+                        <h3 class="card__title">Nosotros</h3>
+                        <p class="card__description">Misión de la empresa: Proporcionar soluciones innovadoras y de calidad para nuestros clientes.</p>
+                        <p class="card__description">Visión de la empresa: Ser reconocidos como líderes en el mercado de soluciones tecnológicas a nivel nacional e internacional.</p>
+                        
+                    </article>
+                </div>
+            </section>
+
+                    </main>
+                    <script src="./script.js"></script>
+            <!-- ======================
+                FOOTER
+                ====================== -->
+            <footer class="footer">
+                <p>&copy; 2026 ConIngenio. Todos los derechos reservados.</p>
+            </footer>
+
+            <script src="js/main.js"></script>
+</body>
+</html>
