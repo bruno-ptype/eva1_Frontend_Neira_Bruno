@@ -1,32 +1,85 @@
 document.addEventListener("DOMContentLoaded", function() {
+
+    // ── Tema ──────────────────────────────────────────────
     const toggleButton = document.getElementById("toggle-button");
     const htmlElement = document.documentElement;
 
-    // script para cambiar el tema
     function applyTheme(theme) {
         htmlElement.setAttribute('data-theme', theme);
-        if (theme === 'dark') {
-            toggleButton.innerHTML = "Activar modo claro 🌞";
-        } else {
-            toggleButton.innerHTML = "Activar modo oscuro 🌙";
-        }
+        toggleButton.innerHTML = theme === 'dark' ? "Activar modo claro 🌞" : "Activar modo oscuro 🌙";
     }
 
-    // script para detectar el tema del sistema operativo
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const initialTheme = systemPrefersDark ? 'dark' : 'light';
-    applyTheme(initialTheme);
+    applyTheme(systemPrefersDark ? 'dark' : 'light');
 
-    // evento para cambiar el tema al hacer clic en el botón
     toggleButton.addEventListener("click", function(e) {
         e.preventDefault();
         const currentTheme = htmlElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        applyTheme(newTheme);
+        applyTheme(currentTheme === 'dark' ? 'light' : 'dark');
     });
 
-    // 4. Escuchar cambios del sistema en tiempo real
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
         applyTheme(e.matches ? 'dark' : 'light');
     });
-});
+
+// ############ Validador #################
+    const form = document.getElementById('contactForm');
+    const feedback = document.getElementById('formFeedback');
+
+    // Listeners en tiempo real
+    ["name", "email", "message"].forEach(function(id) {
+        const input = document.getElementById(id); // ✅ "input" para no chocar con "field"
+
+        input.addEventListener('blur', function() {
+            if (!input.value.trim()) input.classList.add('invalid');
+        });
+
+        input.addEventListener('input', function() {
+            if (input.classList.contains('invalid') && input.value.trim()) {
+                input.classList.remove('invalid');
+            }
+        });
+    });
+
+    // Submit
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        const nameField = document.getElementById('name');
+        const emailField = document.getElementById('email');
+        const messageField = document.getElementById('message');
+
+         console.log('name:', nameField.value);
+        console.log('email:', emailField.value);
+        console.log('message:', messageField.value);
+
+        feedback.textContent = '';
+        feedback.classList.remove('error', 'success');
+        [nameField, emailField, messageField].forEach(f => f.classList.remove('invalid'));
+
+        let valid = true;
+        if (!nameField.value.trim()) { nameField.classList.add('invalid'); valid = false; }
+        if (!emailField.value.trim()) { emailField.classList.add('invalid'); valid = false; }
+        if (!messageField.value.trim()) { messageField.classList.add('invalid'); valid = false; }
+
+        if (!valid) {
+            feedback.textContent = 'Completa todos los campos antes de enviar.';
+            feedback.classList.add('error');
+            return;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(emailField.value.trim())) {
+            emailField.classList.add('invalid');
+            feedback.textContent = 'Por favor, ingresa un correo electrónico válido.';
+            feedback.classList.add('error');
+            return;
+        }
+
+        feedback.textContent = '¡Formulario enviado con éxito!';
+        feedback.classList.add('success');
+        //form.reset();
+    },);
+
+}); 

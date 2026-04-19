@@ -23,10 +23,10 @@
             <h1 class="logo">ConIngenio</h1>
 
             <ul class="nav_list">
-                <ul><a href="#Home">Home</a></ul>
-                <ul><a href="#Nuestros servicios">Nuestros servicios</a></ul>
-                <ul><a href="#contacto">Contacto</a></ul>
-                <ul><a href="#Nosotros">Nosotros</a></ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#NuestrosServicios">Nuestros servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#Nosotros">Nosotros</a></li>
             </ul>
         </nav>  
 
@@ -63,7 +63,6 @@
                           |||Tarjeta de Home |||
                          #######################-->
 
-                        <br>
                         <h3 class="card__title">Nuestra empresa</h3>
                         <p class="card__description">Creamos soluciones personalizadas que se adaptan a las necesidades específicas de tu negocio, utilizando las últimas tecnologías.</p>  
 
@@ -145,7 +144,7 @@ Ecosistemas y Soluciones Low-Code</p>
                     <button type="submit" class="btn-primary">Enviar</button>
 
                     <!-- Feedback dinámico -->
-                    <p class="form__feedback" id="formFeedback"></p>
+                    <p class="form_feedback" id="formFeedback"></p>
                 </form>
                 </section>
 
@@ -154,30 +153,31 @@ Ecosistemas y Soluciones Low-Code</p>
                 |||| Información de la empresa||||
                 ###############################-->
 
-                <article class="card">
+                <article class="card_contact_info">
                         <h3 class="card__title">Información de ConIngenio</h3>
-                        <p class="card__description">Dirección física de la empresa:</p>
-                        <p class="card__description">Av. Providencia 1234, Oficina 601</p>
-                        <p class="card__description">Providencia, Santiago</p>
-                        <p class="card__description">Chile</p>
+                        
+                        <div class = "contact_item"> 
+                            <span class="contact_label">Dirección</span>
+                        <span>Av. Providencia 1234, Oficina 601<br>Providencia, Santiago, Chile</span>
+                    </div></span>
 
-                        <br>
+                        <div class = "contact_item"> 
+                            <span class="contact_label">Contacto telefónico</span>
+                            <span class="contact_label">+56 2 1234 5678</span>
 
-                        <p class="card_description">Contacto telefónico:</p>
-                        <p class="card_description">+56 2 1234 5678</p>
+                        </div>
+                        
+                        <div class="contact_item">
+                            <span class="contact_label">Dominio de la página de web</span>
+                            <span class="contact_label">www.coningenio.cl</span>
 
-                        <br>
-
-                        <p class="card_description">Dominio de la página de web:</p>
-                        <p class="card_description">www.coningenio.cl</p>
-
-                        <br>
-                        <br>
-
-                        <p class="card_description">Correo electrónico:</p>
-                        <p class="card_description">info@coningenio.cl</p>
-
-                    <br>
+                        </div>
+                        <div class="contact_item">
+                            <span class="contact_label">Correo electrónico</span>
+                            <span class="contact_label">info@coningenio.cl</span>
+                        </div>
+                        </div>
+                    
 
                     </article>
 
@@ -196,7 +196,7 @@ Ecosistemas y Soluciones Low-Code</p>
             </section>
 
                     </main>
-                    <script src="./script.js"></script>
+                    
             <!-- ======================
                 FOOTER
                 ====================== -->
@@ -204,6 +204,6 @@ Ecosistemas y Soluciones Low-Code</p>
                 <p>&copy; 2026 ConIngenio. Todos los derechos reservados.</p>
             </footer>
 
-            <script src="js/main.js"></script>
+            <script src="script.js"></script>
 </body>
 </html>

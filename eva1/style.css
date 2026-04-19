@@ -86,10 +86,10 @@ nav {
 nav ul {
     list-style: none;
     margin: 0;
-    padding: 13px 15px;
+    padding: 0;
     display: flex;
     justify-content: center;
-    background-color: var(--primary-color);
+    background-color:transparent;
     border-radius: 5px;
     color: var(--text-color);
 }
@@ -106,7 +106,7 @@ nav ul li a {
 }
 nav ul li a:hover {
     text-decoration:none;
-    background-color: var(--secondary-color);
+    background-color: transparent;
     color: var(--text-color);
 }
 
@@ -269,10 +269,44 @@ h4 {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 16px 40px rgba(56,189,248,0.13);
 }
-/* Al pasar el mouse por la card, se eleva visualmente (transform y box-shadow) */
 .card:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 16px 40px rgba(56,189,248,0.13);
+}
+
+.card_contact_info{
+  margin: 2rem;
+  flex-direction: column;
+  display: flex;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  padding: 10px 20px 30px 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #ddd;
+}
+
+.contact_item{
+  display:flex;
+  flex-direction: column;
+  gap:2rem;
+}
+
+.contact_label{
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card_contact_info:hover {
+  transform: translateY(-8px) scale(1.03);
+  border-radius: 12px;
+  border-color: white;
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 16px 40px rgba(56,189,248,0.13);;
+  border: 1px solid #ddd;
+
 }
 
 .section {
@@ -330,7 +364,8 @@ h4 {
   max-width: 1200px;
   margin: 0 auto;
   border-color: var(--background-color);
-  box-shadow: 0 2px 12px rgba(56, 189, 248, 0.04);
+  
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .sections h4{
@@ -343,6 +378,7 @@ h4 {
   padding: 4rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  border: 1px solid white;
 }
 
 .sections--light {
@@ -356,15 +392,33 @@ h4 {
   margin-bottom: 2.5rem;
   font-size: 2rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: var(--text-color);
   letter-spacing: 0.5px;
+}
+
+.card__subtitle {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    background-color: var(--secondary-color);
+     border-radius: 5px;
+     padding: 10px; 
+}
+
+.card__subtitle:hover {
+
+    color: var(--text-color);
+    transform: translateY(-8px) scale(1.03);
+    border-radius: 12px;
+    border-color: white;
+    box-shadow: 0 16px 40px rgba(56,189,248,0.13);
+    border: 1px solid #ddd;
 }
 
 /* Estilos para el formulario de contacto */
 
 label {
   font-weight: 500;
-  color: var(--text-color);
+  color: var(--primary-color);
   margin-bottom: 0.3rem;
 }
 
@@ -376,7 +430,7 @@ textarea {
   border-radius: 5px;
   font-size: 1rem;
   background: var(--secondary-color);
-  color: #1e293b;
+  color:  var(--text-color);
   transition: border 0.2s, box-shadow 0.2s;
   margin-top: 0.3rem;
 }
